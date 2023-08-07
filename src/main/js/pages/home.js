@@ -22,6 +22,7 @@ class PageHome extends React.Component {
                 <h1>Demo App!</h1>
 				<Titulo entidad="Instrumentos" emoji="🎸" />
 				<InstrumentoList instrumentos={this.state.instrumentos} />
+				<Link to="/nuevo-instrumento">Nuevo Instrumento</Link>
 				<Titulo entidad="Musicos" emoji="🎵" />
 				<MusicoList musicos={this.state.musicos} />
 				<Link to="/nuevo-musico">Nuevo Musico</Link>
@@ -48,7 +49,7 @@ class InstrumentoList extends React.Component {
 			<Instrumento key={instrumento._links.self.href} instrumento={instrumento} />
 		);
 		return (
-			<table>
+			<table border="1">
 				<tbody>
 					<tr>
 						<th>Nombre</th>
@@ -67,7 +68,7 @@ class MusicoList extends React.Component {
 			<Musico key={musico._links.self.href} musico={musico} />
 		);
 		return (
-			<table>
+			<table border="1">
 				<tbody>
 					<tr>
 						<th>Nombre</th>
